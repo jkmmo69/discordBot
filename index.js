@@ -52,7 +52,7 @@ bot.on('guildMemberRemove', member => {
 
 bot.on("message", async message => {
   if(message.author.bot) return;
-  if(message.channel.type === "dm") return;
+  if(message.channel.type === "dm") return message.reply("Don't dm me again.");
 
   let prefix = botconfig.prefix;
   let messageArray = message.content.split(" ");
